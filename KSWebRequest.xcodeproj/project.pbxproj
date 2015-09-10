@@ -14,6 +14,10 @@
 		370F7C221BA116EA0008CE1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 370F7C211BA116EA0008CE1A /* Images.xcassets */; };
 		370F7C251BA116EA0008CE1A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 370F7C231BA116EA0008CE1A /* LaunchScreen.xib */; };
 		370F7C311BA116EA0008CE1A /* KSWebRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 370F7C301BA116EA0008CE1A /* KSWebRequestTests.m */; };
+		370F7C3D1BA11CA50008CE1A /* KSWebRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 370F7C3C1BA11CA50008CE1A /* KSWebRequest.m */; };
+		370F7C401BA132F50008CE1A /* RequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 370F7C3F1BA132F50008CE1A /* RequestManager.m */; };
+		370F7C431BA154160008CE1A /* KSWebFileReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 370F7C421BA154160008CE1A /* KSWebFileReference.m */; };
+		D0FDD6E55897B12CBC236436 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 463536F4D39DCDA95B6A53FD /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,15 @@
 		370F7C2A1BA116EA0008CE1A /* KSWebRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSWebRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370F7C2F1BA116EA0008CE1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		370F7C301BA116EA0008CE1A /* KSWebRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSWebRequestTests.m; sourceTree = "<group>"; };
+		370F7C3B1BA11CA50008CE1A /* KSWebRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWebRequest.h; sourceTree = "<group>"; };
+		370F7C3C1BA11CA50008CE1A /* KSWebRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWebRequest.m; sourceTree = "<group>"; };
+		370F7C3E1BA132F50008CE1A /* RequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestManager.h; sourceTree = "<group>"; };
+		370F7C3F1BA132F50008CE1A /* RequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestManager.m; sourceTree = "<group>"; };
+		370F7C411BA154160008CE1A /* KSWebFileReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KSWebFileReference.h; sourceTree = "<group>"; };
+		370F7C421BA154160008CE1A /* KSWebFileReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KSWebFileReference.m; sourceTree = "<group>"; };
+		463536F4D39DCDA95B6A53FD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3A4E799DDB1AD769E0BD04 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C50C2D24400E00B77C3E2707 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0FDD6E55897B12CBC236436 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +77,12 @@
 		370F7C081BA116EA0008CE1A = {
 			isa = PBXGroup;
 			children = (
+				370F7C3A1BA116FD0008CE1A /* src */,
 				370F7C131BA116EA0008CE1A /* KSWebRequest */,
 				370F7C2D1BA116EA0008CE1A /* KSWebRequestTests */,
 				370F7C121BA116EA0008CE1A /* Products */,
+				9DE614767BFC690FDD131E08 /* Pods */,
+				CB36521F7F34396A43B68A81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +106,8 @@
 				370F7C211BA116EA0008CE1A /* Images.xcassets */,
 				370F7C231BA116EA0008CE1A /* LaunchScreen.xib */,
 				370F7C141BA116EA0008CE1A /* Supporting Files */,
+				370F7C3E1BA132F50008CE1A /* RequestManager.h */,
+				370F7C3F1BA132F50008CE1A /* RequestManager.m */,
 			);
 			path = KSWebRequest;
 			sourceTree = "<group>";
@@ -119,6 +138,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		370F7C3A1BA116FD0008CE1A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				370F7C3B1BA11CA50008CE1A /* KSWebRequest.h */,
+				370F7C3C1BA11CA50008CE1A /* KSWebRequest.m */,
+				370F7C411BA154160008CE1A /* KSWebFileReference.h */,
+				370F7C421BA154160008CE1A /* KSWebFileReference.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		9DE614767BFC690FDD131E08 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C50C2D24400E00B77C3E2707 /* Pods.debug.xcconfig */,
+				9A3A4E799DDB1AD769E0BD04 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB36521F7F34396A43B68A81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				463536F4D39DCDA95B6A53FD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +173,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 370F7C341BA116EA0008CE1A /* Build configuration list for PBXNativeTarget "KSWebRequest" */;
 			buildPhases = (
+				EB12DACED04FE9E1F1611C10 /* Check Pods Manifest.lock */,
 				370F7C0D1BA116EA0008CE1A /* Sources */,
 				370F7C0E1BA116EA0008CE1A /* Frameworks */,
 				370F7C0F1BA116EA0008CE1A /* Resources */,
+				F27B9151E553918BED34E30B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,13 +263,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		EB12DACED04FE9E1F1611C10 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F27B9151E553918BED34E30B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		370F7C0D1BA116EA0008CE1A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				370F7C1D1BA116EA0008CE1A /* ViewController.m in Sources */,
+				370F7C401BA132F50008CE1A /* RequestManager.m in Sources */,
 				370F7C1A1BA116EA0008CE1A /* AppDelegate.m in Sources */,
+				370F7C3D1BA11CA50008CE1A /* KSWebRequest.m in Sources */,
+				370F7C431BA154160008CE1A /* KSWebFileReference.m in Sources */,
 				370F7C171BA116EA0008CE1A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +430,7 @@
 		};
 		370F7C351BA116EA0008CE1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C50C2D24400E00B77C3E2707 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSWebRequest/Info.plist;
@@ -355,6 +441,7 @@
 		};
 		370F7C361BA116EA0008CE1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A3A4E799DDB1AD769E0BD04 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KSWebRequest/Info.plist;
@@ -416,6 +503,7 @@
 				370F7C361BA116EA0008CE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		370F7C371BA116EA0008CE1A /* Build configuration list for PBXNativeTarget "KSWebRequestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +512,7 @@
 				370F7C391BA116EA0008CE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
