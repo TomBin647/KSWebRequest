@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KSWebRequest"
-  s.version      = "0.1"
+  s.version      = "0.2"
   s.summary      = "KSWebRequest"
 
   s.description  = <<-DESC
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/bing6/KSWebRequest.git", :tag => "0.1" }
+  s.source       = { :git => "https://github.com/bing6/KSWebRequest.git", :tag => "0.2" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -132,6 +132,6 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   
-  s.dependency "AFNetworking", "~> 2.5.0"
+  s.dependency "AFNetworking", "~> 2.6.1"
 
 end
