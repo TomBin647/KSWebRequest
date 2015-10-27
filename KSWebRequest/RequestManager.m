@@ -26,12 +26,12 @@
     return _staticObject;
 }
 
-- (KSWebRequest *)createWebRequest
+- (KSWebRequest *)defaultInstance:(NSString *)path params:(NSDictionary *)params
 {
     static AFHTTPRequestOperationManager * __staticObject = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSURL * url = [NSURL URLWithString:@"http://betaapis.xuexiba.com"];
+        NSURL * url = [NSURL URLWithString:@"http://ab.com"];
         __staticObject = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:url];
         __staticObject.responseSerializer = [AFJSONResponseSerializer serializer];
         //[AFHTTPResponseSerializer serializer];
@@ -40,11 +40,13 @@
     
     KSWebRequest * wr = [[KSWebRequest alloc] initWithManager:__staticObject delegate:self];
     
+    [wr setPath:path];
+    [wr.params setValuesForKeysWithDictionary:params];
     
     return wr;
 }
 
-- (void)webRequestOnBefore:(KSWebRequest *)sender
+- (void)webRequestOnBefore:(KSWebRequest *)sender method:(NSString *)method
 {
     
 }
@@ -62,3 +64,16 @@
 }
 
 @end
+
+
+/**
+ * @brief 测试
+ */
+void w_Test(NSString *name, T t)
+{
+    [__REQUEST(@"/bb/test.jsp", nil) post:t];
+}
+
+
+
+

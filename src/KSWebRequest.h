@@ -82,7 +82,15 @@ typedef void(^KSWebRequestComplete)(id res, NSError * error);
 /**
  * @brief 请求之前调用
  */
-- (void)webRequestOnBefore:(KSWebRequest *)sender;
+- (void)webRequestOnBefore:(KSWebRequest *)sender method:(NSString *)method;
+/**
+ * @brief 数据请完成调用
+ */
+- (void)webRequestOnSuccess:(id)responseObject;
+/**
+ * @brief 数据请失败调用
+ */
+- (void)webRequestOnFailure:(NSError *)error;
 /**
  * @brief 请求正确调用之后查看一下数据是否出错
  */

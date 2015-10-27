@@ -13,6 +13,18 @@
 
 + (RequestManager *)shared;
 
-- (KSWebRequest *)createWebRequest;
+- (KSWebRequest *)defaultInstance:(NSString *)path params:(NSDictionary *)params;
 
 @end
+
+//回调
+#define T KSWebRequestComplete
+//获取一个WEB请求对象
+#define __REQUEST(path, args) [[RequestManager shared] defaultInstance:path params:args]
+
+
+
+/**
+ * @brief 测试
+ */
+void w_Test(NSString *name, T t);

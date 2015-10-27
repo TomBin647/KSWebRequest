@@ -59,8 +59,8 @@
 {
     NSAssert(!self.current, @"请保证一个对象一次请求.");
     
-    if ([self.delegate respondsToSelector:@selector(webRequestOnBefore:)]) {
-        [self.delegate webRequestOnBefore:self];
+    if ([self.delegate respondsToSelector:@selector(webRequestOnBefore:method:)]) {
+        [self.delegate webRequestOnBefore:self method:method];
     }
 
     NSError *serializationError = nil;
